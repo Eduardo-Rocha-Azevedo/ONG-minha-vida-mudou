@@ -1,0 +1,76 @@
+@import "compass/css3";
+
+:root {
+  --seafoam: rgb(30, 205, 151);
+  --white: white;
+  --gray: rgb(200, 200, 200);
+}
+
+body {
+  text-align: center;
+}
+
+.center-component {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button.colins-submit {
+  background: transparent;
+  border: none;
+}
+
+button.colins-submit.is-active {
+  cursor: default;
+}
+
+button.colins-submit:focus {
+  outline: none;
+}
+
+button.colins-submit::-moz-focus-inner {
+  border: 0;
+}
+
+button.colins-submit svg text.textNode {
+  font-family: 'Montserrat', sans-serif;
+  fill: var(--seafoam);
+}
+
+button.colins-submit svg text.checkNode {
+  fill-opacity: 0;
+}
+
+button.colins-submit svg rect.btn-shape.btn-bg {
+  stroke: var(--gray);
+  fill: var(--white);
+}
+
+button.colins-submit svg rect.btn-shape.btn-color {
+  stroke: var(--seafoam);
+  fill: var(--white);
+  stroke-dasharray: 453; /* Magic number */
+  stroke-dashoffset: 0;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
+  color: #575757;
+  font-size: 1rem;
+  max-width: 330px;
+}
+
+p a {
+  color: var(--seafoam);
+}
+
+p a:hover,
+p a:active {
+  color: saturate(var(--seafoam), 20%);
+}
+
+p a:visited {
+  color: desaturate(var(--seafoam), 20%);
+}

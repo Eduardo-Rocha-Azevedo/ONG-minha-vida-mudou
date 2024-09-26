@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    z-index: 2;
+
+}
+
+header{
+    z-index: 9999;
+    margin-top: 0;
+    width: 100%;
+}
+
+/* MENU */
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides{
+    max-width:100%; 
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 100%;
+    position: relative;
+    height: 650px;
+}
+.slide img{ 
+    max-width:1440px;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+.manual-navigation{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: -40px;
+    justify-content: center;
+}
+
+.manual-btn{
+   
+    background: rgba(255, 255, 255, 0.35);
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 1s;
+    z-index: 2;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+.manual-btn:hover{
+    background: #fff;
+    color: #000;
+}
+
+.navigation-auto div{
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 1;
+
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: -40px;
+    justify-content: center;
+}
+
+.navigation-auto div:hover {
+    background: rgb(255, 255, 255);
+}
+
+.navigation-auto div:not(:last-child){
+
+    margin-right: 20px;
+
+}
+#radio1:checked ~ .first{margin-left: 0;}
+#radio2:checked ~ .first{margin-left: -100%;}
+#radio3:checked ~ .first{margin-left: -200%;}
+#radio4:checked ~ .first{margin-left: -300%;}
+#radio5:checked ~ .first{margin-left: -400%;}
+
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4,
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #000;
+}
+
+h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+
+nav img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo semi-transparente */
+    z-index: 2; /* Para sobrepor a imagem */
+}
+
+nav{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   font-family: "Poppins", sans-serif;
+   background-color:#afafaf;
+   height: 8vh;
+   color: #fff;
+   margin-top: 0;
+}
+
+a{
+    color:#000;
+    text-decoration: none;
+    transition: 1s;
+    z-index: 2;
+}
+
+a:hover{
+    color: #707070;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li{
+   letter-spacing: 3px;
+   margin-left: 32px;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+/* FIM MENU */
+
+@media (max-width: 999px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: rgb(60, 59, 59);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+        transform: translateX(100%);
+        
+    }
+    .logo{
+        margin-left: 200px;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .nav-list.active{
+        transform: translateX(0);
+        z-index: 2;
+    
+    }
+
+    .mobile-menu div{
+        display: block;
+    }
+    
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+}
+
+.mobile-menu .active .line1{
+    transform: rotate(-45deg) translate(-8px,8px);
+}
+
+.mobile-menu .active .line2{
+    opacity: 0;
+}
+
+.mobile-menu .active .line3{
+    transform: rotate(45deg) translate(-5px,-7px);
+}
+}
