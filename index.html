@@ -6,73 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/1710352643949.ico" type="image/x-icon">
     <title>Ong minha vida mudou</title>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <nav>
-          
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-          <ul class="nav-list">
-            <li><a href="/">Início</a></li>    
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
+            <ul>
+                <li class="nav-item"><a href="#home" class="nav-link" data-menu>Home</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link" data-menu>Sobre</a></li>
+                <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link" data-menu>Contato</a></li>
+            </ul>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt="menu"></button>
+            </div>
         </nav>
-      </header>
-
-    <section>
-        <div class="slider">
-            <div class="slides">
-             
-                <!-- Radio buttons -->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <input type="radio" name="radio-btn" id="radio5">
-
-                <!-- Imagens -->
-                <div class="slide first">
-                    <img src="assets/img/ong1.png" alt="Imagem 1">
-                </div>  
-               
-                <!-- Navegaçao auto -->
-
-
-            </div>
-
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-                <label for="radio5" class="manual-btn"></label>
-            </div>
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-                <div class="auto-btn5"></div>
-                
-            </div>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#home" class="nav-link" data-menu>Home</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#projetos" class="nav-link" data-menu>Projetos</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link" data-menu>Contato</a></li>
+            </ul>
         </div>
+    </header>
+
+    <section class="sobre">
+
+        <img src="assets/img/ong1 (2).png" alt="Imagem cortada">
+         <h2>Quem somos</h2><div class="texto-direita">
+            <p>Transformando vidas de crianças, adolescentese jovens em situação de vulnerabilidade
+                social e relacional, por meio de atividades socioeducativas, culturais e esportivas como instrumento de desenvolvimento social.
+               <br> Realizando sonhos, mudando histórias, através do amor, dedicação, orientação, qualificando, capacitando e
+                criando novas oportunidades.</p>
+            <a href="#projetos">Ver projetos</a>
+        </div>
+       
     </section>
-    <section class="container">
-        
+    <section>
+        <article>
+            <h2>Nossa história</h2>
+            <p>Somos uma entidade civil de direito privado, sem fins lucrativos, declarada de Utilidade Pública Municipal e Estadual.
+               Fundada em 2012, pela sra.Rita de Cássio Dalbello, idealizadora deste sonho que se tornou um grande projeto.
+            </p>
+        </article>
+        <article>
+            <h2>Nossa Visão</h2>
+            <p>Ser reconhecida como Instituição de Denvolvimento Social, referência em inclusão, desenvolvimento integral e empoderamento até 2025 em Curitiba e região metropolitana</p>
+        </article>
+        <article>
+            <h2>Nossos selos</h2>
+            <img src="assets/img/images.jfif" alt="">
+            <img src="assets/img/not_1797_comtiba_gd.png" alt="">
+        </article>
+    </section>
 
     <footer>
-        <h2>ONG Minha Vida Mudou</h2>
-        <p>© 2024 Agência de Viagens. Todos os direitos reservados.</p>
+        <img src="assets/img/1710352643949.png" alt="">
+        <p>© 2024 Ong minha vida mudou. Todos os direitos reservados.</p>
     </footer>
 </body>
 
 </html>
-
+<script src="assets/js/script.js" defer></script>
 <script src="assets/js/MobileMenu.js"></script>

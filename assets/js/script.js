@@ -4,7 +4,7 @@ document.getElementById('radio1').checked = true;
 
 setInterval( function() {
 
-//nextImage();
+nextImage();
 },4000);
 
 function nextImage(){
@@ -15,6 +15,12 @@ function nextImage(){
 
     document.getElementById('radio'+count).checked = true;
 }
+
+//ANIMAÇAO DO MENU =========================================
+window.addEventListener('scroll', function(){
+    const header = document.querySelector('#header');
+    header.classList.toggle('rolagem', window.scrollY > 100);
+});
 
 //ANIMAÇAO DA PAGINA =========================================
 

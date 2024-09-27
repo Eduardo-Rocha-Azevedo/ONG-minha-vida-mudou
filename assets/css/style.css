@@ -1,264 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-section{
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+:root{
+    --black : #101010;
+    --darkGray: #191919;
+    --lightWhite: #e2e2e2;
+    --orange: #ca3c08af;
 }
 
-.logo{
-    z-index: 3;
-    position: absolute;
+*{
+    margin: 0;
+    padding: 0;
+}
+h2{font-family: 'Poppins', sans-serif;}
+p{font-family: 'Poppins', sans-serif;}
+section {
     width: 100%;
-    margin-left: 40%;
-    margin-top: 30vh;
-    padding: 20px 0;
-    font-family: "Orbitron", sans-serif;
-    font-size: 30px;
+    height: auto;
+}
+a{
+    font-family: 'Poppins';
 }
 .container {
-    display: flex;
-    justify-content: center; /* Alinha os pacotes horizontalmente ao centro */
-    align-items: center; 
-    background: #f7f7f7;
-}
-
-.destaques h2{
-    font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
-    color: #6b6969;
-    margin-bottom: 10vh;
-    text-align: center;
-    margin-top: 6vh;
-
-}
-.box-pacotes {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os pacotes quebrem para a próxima linha quando não couberem mais na largura do contêiner */
-    justify-content: space-between; /* Espaçamento igual entre os pacotes e no meio */
-    padding: 0 20px;
- 
-}
-
-.box {
-    width: 40%;
-    margin-bottom: 30px; /* Adiciona espaço entre as linhas de pacotes */
-    text-align: center; /* Alinha o texto centralmente dentro do box */
-    border-radius: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: #fff;
-}
-
-.box img{
-    max-width: 100%;
-    border-radius: 10px 10px 0 0;
-}
-
-.box h3 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-    color: #6b6969;
-    margin: 10px 0;
-}
-.box p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14.6px;
-    color: #6b6969;
-    margin: 10px 0;
-    margin-left: 5%;
-    margin-right: 5%;
-    justify-content: center;
-    text-align: left;
-    color: #706f6fa5;
-}
-.box hr{
-    width: 50%;
-    margin: 10px auto;
-}
-
-.box button{
-    padding: 7px 10px;
-    border: 1px solid #aeacac;
-    background-color: #fff;
-    margin-bottom: 15px;
-}
-
-.box button:hover{
-    background-color: #d3d3d3;
-    color: white;
-    transition: 1s;
-}
-.box button a {
-    text-decoration: none;
-    color: #6b6969;
-    font-family: "Poppins", sans-serif;
-
-}
-
-section:nth-of-type(3){
-    background-image: url(../img/bg.jpg);
-    height: 300px;
-    
-}
-.parallax {
-    position: relative;
-    overflow: hidden;
-    /* Adiciona uma altura mínima para a seção */
-    min-height: 300px;
-    text-align: center;
-    color: white;
-    z-index: 1;
-    
-}
-.parallax h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 23px;
-    color: #fff;
-    margin-top: 5vh;
-    text-align: center;
-    margin-bottom: 10vh;
-}
-.parallax p{
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #fff;
-    margin-top: 12vh;
-    text-align: center;
-   
-
-}
-.parallax hr{
-    width: 40%;
-    margin: 10px auto;
-
-}
-.parallax::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    /* Adicione a cor do filtro desejada */
-    background-color: rgba(0, 0, 0, 0.738); /* Por exemplo, um filtro preto com 50% de opacidade */
-    /* Define o filtro desejado */
-     /* Aqui você pode ajustar o desfoque conforme necessário */
-    z-index: -1;
+    height: auto; 
+    overflow: hidden; 
 }
-.pacotes h2{
-    font-family: '', sans-serif;
-    font-size: 25px;
-    color: #6b6969;
-    margin-bottom: 10vh;
-    text-align: center;
+.sobre {
+    position: relative; 
+    overflow: hidden;  
 }
 
-footer{
-    background-color: #6b6969;
-    color: white;
+.sobre img {
+    width: 100%; 
+    height: 500px; 
+    object-fit: cover;
+    object-position: bottom;
+    filter: brightness(0.7);
+}
+
+.sobre h2 {
+    font-size: 40px; 
+    font-weight: 400; 
+    font-family: 'Poppins', sans-serif; 
+    margin-left: 80px; 
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.sobre a {
+    padding: 10px 20px; 
+    font-size: 18px; 
+    background-color: #fff; 
+    border: 1px solid rgb(47, 172, 102);
+    border-radius: 8px;
+    color: rgb(47, 172, 102); 
+    margin-top: 10px;
+    text-decoration: none; 
+    text-transform: uppercase;
+}
+
+.sobre a:hover {
+    background-color: rgb(47, 172, 102);
+    border: none; 
+    color: #fff; 
+}
+.texto-direita {
+    width: 45%;
+    float: right;
+    text-align: left;
+    padding: 20px;
+}
+
+.texto-direita p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #000000cb;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding-right:15vh;
+}
+
+
+footer {
+    background-color: #333;
+    color: #272727;
     text-align: center;
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    max-height: 100px;
-    width: 100%;
-    margin-bottom: 0;
-    background-color: rgba(60, 59, 59, 0.897);
-  
-}
-
-footer h2{
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
     color: #fff;
-    margin-left: 15vh;
+    
 }
-
-
-.alert {
-    padding: 15px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
-.alert-success {
-    color: #3c763d;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-}
-
-.alert-danger {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-}
-/* Lista de Pacotes */
-
-.table-container {
-    text-align: center;
-}
-
-table {
-    border: 1px solid #b4b1b1;
-    border-bottom: 1px solid #b4b1b1;
-    color: #161616;
-    padding: 10px;
-    font-family: "Poppins", sans-serif;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    background-color: #fff;
-}
-
-th {
-    color: #121212;
-    padding: 10px;
-}
-
-td {
-    padding: 10px;
-    text-align: center;
-}
-
-table button {
-    padding: 7px 10px;
-    border: 1px solid #aeacac;
-    margin-bottom: 15px;
-}
-span{
-    color:#121212;
-}
-
-#saiba {
-    background: #2e8a1b;
-}
-
-#excluir {
-    background: #d9534f;
-}
-
-#titlePacote {
-    font-family: 'Poppins', sans-serif;
-    font-size: 25px;
-    color: #6b6969;
-    margin-bottom: 5vh;
-    text-align: center;
-    margin-top: 6vh;
-}
-
-
-@media (max-width: 768px) {
-    .box {
-        width: 100%; /* Para telas menores, ocupa toda a largura disponível para garantir que haja apenas um pacote por linha */
-    }
-   
+footer img {
+    width: 70px;
+    margin-top: 10px;
 }
 
 /* Animacoes*/
