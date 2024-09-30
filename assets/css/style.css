@@ -22,6 +22,9 @@ section {
 }
 a{
     font-family: 'Poppins';
+    text-decoration: none; 
+    text-transform: uppercase;
+    
 }
 #banner {
     width: 100%; 
@@ -33,7 +36,7 @@ a{
 /*Apresentacao ============================================================*/
 .apresentacao {
     display: flex; /* Flexbox para alinhar o título e o conteúdo à esquerda */
- 
+    margin-bottom: 30px;
 }
 
 .apresentacao h2 {
@@ -41,6 +44,7 @@ a{
     font-weight: 400; 
     font-family: 'Poppins', sans-serif; 
     margin-left: 80px; /* Espaçamento à direita para separar do conteúdo */
+    margin-top: 10vh;
 }
 
 .apresentacao .texto-direita {
@@ -65,8 +69,6 @@ a{
     border-radius: 8px;
     color: var(--green); 
     margin-top: 10px;
-    text-decoration: none; 
-    text-transform: uppercase;
     width: 150px;
 }
 
@@ -129,6 +131,16 @@ a{
 .sobre article h2 {
     font-size: 50px; 
     font-weight: 400; 
+    margin-top: 15vh;
+}
+.sobre article p {
+    font-size: 18px; 
+    margin-top: 20px;
+    padding-right: 20px;
+}
+.sobre article b{
+    font-size: 55px;
+    text-transform: uppercase;
 }
 
 #sobre1 {
@@ -137,6 +149,20 @@ a{
 
 #sobre2 {
     background-color: var(--carmesin);
+}
+#sobre3 {
+    background-color: var(--green);
+
+}
+#sobre3 h2{
+    margin-top: 28px;
+}
+#sobre3 a{
+    color: var(--lightWhite);
+    background-color: var(--lightBlue);
+    padding: 9px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 
