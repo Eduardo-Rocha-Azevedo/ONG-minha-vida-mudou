@@ -4,7 +4,7 @@
     --black : #101010;
     --darkGray: #191919;
     --lightWhite: #eeeeee;
-    --orange: #ca3c08af;
+    --lightYellow: #f7d154;
     --green:rgb(47, 172, 102);
     --lightBlue:#1b8fcf;
     --carmesin:#e94362;
@@ -35,30 +35,47 @@ a{
 }
 /*Apresentacao ============================================================*/
 .apresentacao {
-    display: flex; /* Flexbox para alinhar o título e o conteúdo à esquerda */
+    display: flex; /* Flexbox para alinhar a parte esquerda (imagem + título) e direita (texto + botão) */
+    justify-content: space-between; /* Cria espaço entre os dois blocos */
+    align-items: center; /* Centraliza verticalmente */
     margin-bottom: 30px;
+}
+
+.apresentacao .esquerda {
+    display: flex;
+    flex-direction: column; /* Coloca o título e a imagem um abaixo do outro */
+    align-items: flex-start; /* Alinha à esquerda */
 }
 
 .apresentacao h2 {
     font-size: 60px; 
     font-weight: 400; 
-    font-family: 'Poppins', sans-serif; 
-    margin-left: 80px; /* Espaçamento à direita para separar do conteúdo */
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px; 
     margin-top: 10vh;
+    margin-left: 80px;
+    color: var(--darkGray);
+}
+
+.apresentacao img {
+    max-width: 70%; 
+    height: auto; 
+    margin-bottom: 20px; 
+    margin-left: 80px;
 }
 
 .apresentacao .texto-direita {
-    display: flex; /* Usa flexbox para alinhar o parágrafo e o link */
-    flex-direction: column;
-    margin-left: 25vh;
+    max-width: 600px; /* Limita o tamanho do conteúdo à direita */
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .apresentacao p {
     font-size: 15px; 
-    width: 500px; /* Limita a largura do parágrafo */
     color: #333; 
-    margin-bottom: 10px; /* Espaçamento inferior */
+    margin-bottom: 10px;
+   
 }
 
 .apresentacao a {
@@ -77,6 +94,7 @@ a{
     border: none; 
     color: var(--lightWhite); 
 }
+
 
 
 /*Sobre ================================================================*/
@@ -150,14 +168,19 @@ a{
 #sobre2 {
     background-color: var(--carmesin);
 }
+
 #sobre3 {
+    background-color: var(--lightYellow);
+}
+
+#sobre4 {
     background-color: var(--green);
 
 }
-#sobre3 h2{
+#sobre4 h2{
     margin-top: 28px;
 }
-#sobre3 a{
+#sobre4 a{
     color: var(--lightWhite);
     background-color: var(--lightBlue);
     padding: 9px;
@@ -165,11 +188,68 @@ a{
     margin-top: 10px;
 }
 
+/* Projetos ===================================================================*/
+.projetos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.projetos h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 10vh;
+}
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--green);
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
 
 /*Footer =================================================================*/
 
 footer {
-    background-color: #333;
+    background-color: var(--darkGray);
     color: #272727;
     text-align: center;
     padding: 20px 0;
@@ -194,7 +274,7 @@ footer img {
 }
 
 [data-anima="direita"]{
-    transform: translate3d(50,0,0);
+    transform: translate3d(50px,0,0);
 }
 
 [data-anima="centro"]{
