@@ -1,98 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root{
-    --black : #101010;
+
+:root {
+    --black: #101010;
     --darkGray: #191919;
     --lightWhite: #eeeeee;
     --lightYellow: #f7d154;
-    --green:rgb(47, 172, 102);
-    --lightBlue:#1b8fcf;
-    --carmesin:#e94362;
+    --green: rgb(47, 172, 102);
+    --lightBlue: #1b8fcf;
+    --carmesin: #e94362;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-h2{font-family: 'Poppins', sans-serif;}
-p{font-family: 'Poppins', sans-serif;}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
 section {
     width: 100%;
     height: auto;
 }
-a{
+
+a {
     font-family: 'Poppins';
-    text-decoration: none; 
+    text-decoration: none;
     text-transform: uppercase;
-    
+
 }
+
 #banner {
-    width: 100%; 
-    height: 500px; 
+    width: 100%;
+    height: 500px;
     object-fit: cover;
     object-position: bottom;
     filter: brightness(0.7);
 }
+
 /*Apresentacao ============================================================*/
 .apresentacao {
-    display: flex; /* Flexbox para alinhar a parte esquerda (imagem + título) e direita (texto + botão) */
-    justify-content: space-between; /* Cria espaço entre os dois blocos */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    /* Flexbox para alinhar a parte esquerda (imagem + título) e direita (texto + botão) */
+    justify-content: space-between;
+    /* Cria espaço entre os dois blocos */
+    align-items: center;
+    /* Centraliza verticalmente */
     margin-bottom: 30px;
 }
 
 .apresentacao .esquerda {
     display: flex;
-    flex-direction: column; /* Coloca o título e a imagem um abaixo do outro */
-    align-items: flex-start; /* Alinha à esquerda */
+    flex-direction: column;
+    /* Coloca o título e a imagem um abaixo do outro */
+    align-items: flex-start;
+    /* Alinha à esquerda */
 }
 
 .apresentacao h2 {
-    font-size: 60px; 
-    font-weight: 400; 
+    font-size: 60px;
+    font-weight: 400;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-top: 10vh;
     margin-left: 80px;
     color: var(--darkGray);
 }
 
 .apresentacao img {
-    max-width: 70%; 
-    height: auto; 
-    margin-bottom: 20px; 
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 20px;
     margin-left: 80px;
 }
 
 .apresentacao .texto-direita {
-    max-width: 600px; /* Limita o tamanho do conteúdo à direita */
+    max-width: 600px;
+    /* Limita o tamanho do conteúdo à direita */
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .apresentacao p {
-    font-size: 15px; 
-    color: #333; 
+    font-size: 15px;
+    color: #333;
     margin-bottom: 10px;
-   
+
 }
 
 .apresentacao a {
-    padding: 10px; 
-    font-size: 15px; 
-    background-color: #fff; 
+    padding: 10px;
+    font-size: 15px;
+    background-color: #fff;
     border: 1px solid var(--green);
     border-radius: 8px;
-    color: var(--green); 
+    color: var(--green);
     margin-top: 10px;
     width: 150px;
 }
 
 .apresentacao a:hover {
     background-color: var(--green);
-    border: none; 
-    color: var(--lightWhite); 
+    border: none;
+    color: var(--lightWhite);
 }
 
 
@@ -100,63 +117,83 @@ a{
 /*Sobre ================================================================*/
 .container {
     width: 100%;
-    height: auto; 
-    overflow: hidden; 
+    height: auto;
+    overflow: hidden;
 }
 
 .sobre {
-    display: flex; /* Cria uma coluna para imagem e artigos */
-    height: 100vh; /* Define a altura da seção para ocupar toda a tela */
-    overflow: hidden; /* Esconde a parte que ultrapassa a altura */
+    display: flex;
+    /* Cria uma coluna para imagem e artigos */
+    height: 100vh;
+    /* Define a altura da seção para ocupar toda a tela */
+    overflow: hidden;
+    /* Esconde a parte que ultrapassa a altura */
 }
 
 .sobre .imagem-paralax {
-    flex: 1; /* Metade da tela para a imagem */
-    position: relative; /* Para o efeito de paralaxe */
-    overflow: hidden; /* Para esconder qualquer parte da imagem que ultrapasse */
+    flex: 1;
+    /* Metade da tela para a imagem */
+    position: relative;
+    /* Para o efeito de paralaxe */
+    overflow: hidden;
+    /* Para esconder qualquer parte da imagem que ultrapasse */
 }
 
 .sobre .imagem-paralax img {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; /* Ajusta a imagem para cobrir toda a área */
-    position: absolute; /* Para o efeito de paralaxe */
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir toda a área */
+    position: absolute;
+    /* Para o efeito de paralaxe */
     top: 0;
     left: 0;
-    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+    z-index: -1;
+    /* Coloca a imagem atrás do conteúdo */
 }
 
 .sobre .conteudo-paralax {
-    flex: 1; /* Metade da tela para os artigos */ 
-    overflow-y: scroll; /* Permite rolagem vertical */
-    scrollbar-width: none; /* Para navegadores Firefox */
-   
+    flex: 1;
+    /* Metade da tela para os artigos */
+    overflow-y: scroll;
+    /* Permite rolagem vertical */
+    scrollbar-width: none;
+    /* coloca o focus no conteudo */
+    
+    
+
 }
 
 .sobre .conteudo-paralax::-webkit-scrollbar {
-    display: none; /* Para navegadores WebKit (Chrome, Safari) */
+    display: none;
+    /* Para navegadores WebKit (Chrome, Safari) */
 }
 
 .sobre article {
-    background-color: #f5f5f5; /* Cor de fundo dos artigos */
+    background-color: #f5f5f5;
+    /* Cor de fundo dos artigos */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    height: 500px; /* Altura fixa para os artigos */
-    padding: 30px; /* Preenchimento nos artigos */
+    height: 500px;
+    /* Altura fixa para os artigos */
+    padding: 30px;
+    /* Preenchimento nos artigos */
     color: #fff;
-   
+
 }
 
 .sobre article h2 {
-    font-size: 50px; 
-    font-weight: 400; 
+    font-size: 50px;
+    font-weight: 400;
     margin-top: 15vh;
 }
+
 .sobre article p {
-    font-size: 18px; 
+    font-size: 18px;
     margin-top: 20px;
     padding-right: 20px;
 }
-.sobre article b{
+
+.sobre article b {
     font-size: 55px;
     text-transform: uppercase;
 }
@@ -177,10 +214,12 @@ a{
     background-color: var(--green);
 
 }
-#sobre4 h2{
+
+#sobre4 h2 {
     margin-top: 28px;
 }
-#sobre4 a{
+
+#sobre4 a {
     color: var(--lightWhite);
     background-color: var(--lightBlue);
     padding: 9px;
@@ -225,7 +264,8 @@ a{
     border-radius: 10px;
     margin-bottom: 15px;
 }
-.projetos h2{
+
+.projetos h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -234,11 +274,12 @@ a{
     margin-top: 20px;
     margin-bottom: 10vh;
 }
+
 .card h3 {
     font-size: 22px;
     margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
-    color: var(--green);
+    color: var(--lightBlue);
 }
 
 .card p {
@@ -246,6 +287,131 @@ a{
     color: #666;
 }
 
+
+
+/* contato*/
+#contato {
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.contato {
+    background-color: var(--black);
+}
+
+#contato h1 {
+    font-family: 'Poppins';
+    font-size: 30px;
+    color: var(--lightWhite);
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--darkGray);
+}
+
+.formulario p {
+    font-weight: 40px;
+    align-items: center;
+    margin-left: auto;
+    font-family: "Poppins",sans-serif;
+}
+
+.form-content {
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.form-content label {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-content input {
+    display: inline-block;
+    width: 30em;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #0b45b1;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.form-content p {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+    font-family: "Poppins",sans-serif;
+}
+
+.form button {
+    width: 95px;
+    height: 40px;
+    color: var(--green);
+    border-radius: 8px;
+    border: 1px solid var(--green);
+    font-size: 15px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.form button:hover {
+    background-color: var(--green);
+    color: var(--lightWhite);
+}
+
+.campoForm {
+    width: 40px;
+}
+h4{
+    font-family: "Poppins",sans-serif;
+}
+
+.form-content.error input {
+    border-color: #ff3b25;
+}
+
+.form-content.error p {
+    color: #ff3b25;
+    visibility: visible;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10%;
+}
+
+textarea {
+    padding: 10px;
+    outline: none;
+    border: 1px solid #0b45b1;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    transition: all 0.5s;
+    width: 30em;
+}
+
+textarea:focus {
+    border-color: #202c55;
+    transition: all 0.5s;
+}
+
+.form-content input:focus {
+    border-color: #202c55;
+    transition: all 0.5s;
+}
 /*Footer =================================================================*/
 
 footer {
@@ -255,33 +421,56 @@ footer {
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    
+
 }
+
 footer img {
     width: 70px;
     margin-top: 10px;
 }
-
 /* Animacoes*/
 
-[data-anima]{
+[data-anima] {
     opacity: 0;
     transition: .8s;
 }
 
-[data-anima="esquerda"]{
-     transform: translate3d(-50px,0,0 );/*X Y Z*/
+[data-anima="esquerda"] {
+    transform: translate3d(-50px, 0, 0);
+    /*X Y Z*/
 }
 
-[data-anima="direita"]{
-    transform: translate3d(50px,0,0);
+[data-anima="direita"] {
+    transform: translate3d(50px, 0, 0);
 }
 
-[data-anima="centro"]{
-    transform: translate3d(0,50px,0);
+[data-anima="centro"] {
+    transform: translate3d(0, 50px, 0);
 }
 
-[data-anima].animacao{
+[data-anima].animacao {
     opacity: 1;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+}
+
+/*Botao whatsapp ==========================================================================================================*/
+
+
+#msg1 {
+    right: 90px;
+    visibility: hidden;
+    background: #fff;
+    color: #000;
+    position: fixed;
+    width: 100px;
+    bottom: 55px;
+    font-size: 12px;
+    line-height: 13px;
+    padding: 3px;
+    border-radius: 1px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    padding: 4px;
+    font-family: "Poppins",sans-serif;
 }
