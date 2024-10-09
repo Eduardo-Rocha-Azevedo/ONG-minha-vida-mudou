@@ -1,4 +1,84 @@
 /* Apresentacao Responsiva */
+@media (max-width: 520px) {
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apresentacao .esquerda,
+    .apresentacao .texto-direita {
+        align-items: center;
+        text-align: center;
+    }
+
+    .apresentacao h2 {
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    .apresentacao img {
+        max-width: 90%;
+        margin-left: 0;
+    }
+
+    .apresentacao .texto-direita {
+        padding: 10px;
+        max-width: 100%;
+    }
+    .sobre {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sobre .imagem-paralax,
+    .sobre .conteudo-paralax {
+        flex: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .sobre article {
+        height: auto;
+        padding: 20px;
+        
+    }
+    .sobre article h2{
+        font-size: 35px;
+    }
+    .sobre article b {
+        font-size: 40px;
+    }
+    #sobre4{
+        height: 360px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+    .form-content input,
+    textarea {
+        width: 100%;
+    }
+    footer img {
+        width: 60px;
+    }
+    footer{
+        text-align: center;
+    }
+    footer p{
+        padding: 8px;
+    }
+    #waurlsite img{
+        width: 50px;
+    }
+}
+
 @media (max-width: 768px) {
     .apresentacao {
         flex-direction: column;
@@ -40,6 +120,7 @@
     .sobre article {
         height: auto;
         padding: 20px;
+        
     }
     .sobre article h2{
         font-size: 35px;
@@ -47,9 +128,16 @@
     .sobre article b {
         font-size: 40px;
     }
+    #sobre4{
+        height: 360px;
+    }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
+        width: 98%;
+        height: auto;
+        margin: 5px;
+        align-items: center;
     }
 
     .card {
@@ -71,6 +159,7 @@
     #waurlsite img{
         width: 50px;
     }
+    
 }
 
 

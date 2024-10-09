@@ -46,7 +46,104 @@ header nav ul li a:hover {
 .mobile-menu{
     display: none;
 }
+/* Slides*/
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transição suave ao trocar de slide */
+}
+.slides input {
+    display: none; /* Esconde os botões de navegação */
+}
 
+/* Ajuste para as imagens individuais */
+.slide {
+    min-width: 100%; /* Cada slide ocupa a largura total do contêiner */
+}
+
+.slide img {
+    width: 100%;
+    height: 630px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o slide */
+    transition: filter 1s ease-in-out; /* Transição suave para aplicar o filtro */
+}
+
+/* Filtro para a primeira imagem */
+.slide.first img {
+    filter: brightness(65%); /* Aplica um filtro de escurecimento na primeira imagem */
+}
+.manual-navigation{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: -40px;
+    justify-content: center;
+}
+
+.manual-btn{
+   
+    background: rgba(255, 255, 255, 0.35);
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 1s;
+    z-index: 2;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+.manual-btn:hover{
+    background: #fff;
+    color: #000;
+}
+
+.navigation-auto div{
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 1;
+
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: -40px;
+    justify-content: center;
+}
+
+.navigation-auto div:hover {
+    background: rgb(255, 255, 255);
+}
+
+.navigation-auto div:not(:last-child){
+
+    margin-right: 20px;
+
+}
+#radio1:checked ~ .first{margin-left: 0;}
+#radio2:checked ~ .first{margin-left: -100%;}
+#radio3:checked ~ .first{margin-left: -200%;}
+#radio4:checked ~ .first{margin-left: -300%;}
+#radio5:checked ~ .first{margin-left: -400%;}
+
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4,
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #000;
+}
 /* FIM MENU */
 
 @media (max-width: 999px){
