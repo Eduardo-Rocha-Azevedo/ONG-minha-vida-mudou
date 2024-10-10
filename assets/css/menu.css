@@ -85,9 +85,8 @@ header nav ul li a:hover {
 }
 
 .manual-btn{
-   
     background: rgba(255, 255, 255, 0.35);
-    padding: 7px;
+    padding: 2px;
     cursor: pointer;
     border-radius: 10px;
     transition: 1s;
