@@ -1,0 +1,108 @@
+.project-page {
+    background-color: #f0f0f0;
+    padding: 50px;
+    text-align: center;
+}
+
+.project-page-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.project-page-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-page-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-page-card:hover {
+    transform: translateY(-10px) scale(1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-page-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-page-card-title {
+    font-size: 1.5em;
+    color: #444;
+    margin: 15px 0 10px 0;
+}
+
+.project-page-card-description {
+    font-size: 1em;
+    color: #666;
+}
+/* Estilo para a seção de oficinas */
+.workshops-section {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+  }
+  
+  .workshops-content {
+    display: flex; /* Mantém a descrição e a lista de oficinas lado a lado */
+    gap: 20px; /* Espaço entre a descrição e a lista de oficinas */
+}
+
+.workshops-text {
+    flex: 1; /* Ajusta a largura da descrição */
+    max-width: 600px; /* Limita a largura máxima da descrição */
+}
+  
+  .workshops-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .workshops-text p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .workshops-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Define duas colunas iguais */
+    gap: 20px; /* Espaçamento entre os itens */
+    max-width: 500px;
+}
+
+.workshop {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+  
+  .workshop:hover {
+    transform: translateY(-5px);
+  }
+  
+  .workshop h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .workshop p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
