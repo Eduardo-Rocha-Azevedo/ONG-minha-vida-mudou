@@ -220,28 +220,42 @@ a {
     border-radius: 5px;
     margin-top: 10px;
 }
-/* Estilo da Seção de Linha do Tempo */
 .timeline-section {
     background-color: #f5f5f5;
-   
     text-align: center;
+    padding: 40px 0;
     overflow-x: auto; /* Permite rolagem horizontal se necessário */
-    white-space: nowrap; /* Evita quebra de linha para manter o layout horizontal */
+    white-space: nowrap; /* Impede quebra de linha */
 }
 
 .timeline-section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para a Linha do Tempo Horizontal */
+.timeline-section {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 40px 0;
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+    white-space: normal; /* Permite quebra de linha */
+}
+
+.timeline-section h2 {
+    font-size: 2rem;
+   
 }
 
 /* Estilo para a Linha do Tempo Horizontal */
 .timeline {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza a linha do tempo */
     align-items: center;
     position: relative;
-    padding: 20px 0;
+    
     flex-wrap: nowrap; /* Não permite quebra de linha */
+    overflow-x: auto; /* Garante que não haja estouro horizontal */
 }
 
 .timeline::before {
@@ -259,12 +273,14 @@ a {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 0 20px; /* Espaçamento entre os itens */
+    margin: 0 40px; /* Espaçamento entre os itens */
     z-index: 2;
-    max-width: 200px; /* Limita a largura dos itens */
-    overflow: hidden; /* Evita que o conteúdo ultrapasse o contêiner */
-    white-space: normal; /* Permite que o texto quebre em múltiplas linhas */
-    padding-top: 30px; /* Espaço para mover o conteúdo para baixo */
+    width: 200px; /* Mantém o mesmo tamanho de cada item */
+    padding-top: 30px;
+    text-align: center;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    overflow: hidden; /* Evita que o conteúdo vaze */
+    white-space: normal; /* Permite quebra de linha dentro dos itens */
 }
 
 .timeline-date {
@@ -272,7 +288,6 @@ a {
     color: white;
     padding: 8px 12px;
     border-radius: 20px;
-    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -280,13 +295,14 @@ a {
     background-color: white;
     border: 1px solid #ddd;
     padding: 15px;
-    border-radius: 5px;
-    width: 100%; /* Ajusta a largura para se adaptar ao item */
-    height: 250px; /* Altura fixa para manter a consistência */
+    border-radius: 15px;
+    width: 100%; /* Define largura total de cada item */
+    height: 260px; /* Permite que a altura se ajuste ao conteúdo */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Espaço entre o círculo e o conteúdo */
-}
+    margin-top: 10px;
+    overflow: hidden; 
 
+}
 
 .timeline-content h3 {
     margin-top: 8px;
@@ -302,74 +318,84 @@ a {
     font-size: 15px;
     text-align: left;
 }
-.timeline-section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    margin-top: 15px;
-}
 
 /* Projetos ===================================================================*/
 .projetos {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
 }
 
 .projetos h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    text-align: left;
-    margin-left: 80px;
-    margin-top: 20px;
-    margin-bottom: 10vh;
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
-    color: var(--lightBlue);
+.cards {
+    display: flex; /* Alinha os cards lado a lado */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: center; /* Centraliza os cards na linha */
 }
 
-.card p {
-    font-size: 16px;
-    color: #666;
+.card {
+    position: relative; /* Permite posicionamento absoluto da descrição */
+    width: 300px; /* Largura dos cards */
+    height: 200px; /* Altura dos cards */
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* Impede que a descrição vaze do card */
+    cursor: pointer;
+    transition: transform 0.3s; /* Transição suave ao hover */
 }
 
+.card img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: 100%; /* Imagem ocupa toda a altura do card */
+    object-fit: cover; /* Corta a imagem para preencher o card */
+    border-radius: 15px 15px 0 0; /* Arredonda o topo do card */
+}
 
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow:  0 0 10px#1b8fcf; 
+    background-color: #f1f1f1;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
+/* Mantém a animação do card */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+/* Exibe a descrição ao passar o mouse */
+.card:hover .card__content {
+    transform: rotateX(0deg);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+  
 /* contato*/
 #contato {
     margin-top: 5%;
@@ -493,6 +519,8 @@ textarea:focus {
     border-color: #202c55;
     transition: all 0.5s;
 }
+
+  
 /*Footer =================================================================*/
 
 footer {

@@ -70,6 +70,29 @@
     .card {
         max-width: 90%;
     }
+    .timeline {
+        flex-direction: column;
+        
+    }
+
+    .timeline-item {
+        max-width: 100%;
+        margin: 20px 0; /* Adiciona espaçamento vertical em vez de horizontal */
+    }
+
+    .timeline::before {
+        display: none; /* Oculta a linha horizontal em telas pequenas */
+    }
+
+    .timeline-date {
+        flex: none;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
     .form-content input,
     textarea {
         width: 100%;
