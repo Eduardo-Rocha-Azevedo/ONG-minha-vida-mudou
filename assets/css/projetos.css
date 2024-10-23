@@ -93,9 +93,8 @@
 /* Card interativo */
 .card {
   position: relative;
-  width: 220px; /* Largura dos cards */
-  height: 320px; /* Altura dos cards */
-  background: var(--lightBlue); /* Cor de fundo dos cards */
+  width: 180px; /* Largura dos cards */
+  background: var(--lightWhite); /* Cor de fundo dos cards */
   display: flex;
   flex-direction: column; /* Organiza o conteúdo verticalmente */
   align-items: center;
@@ -162,7 +161,7 @@
 
 .card h3{
   font-family: "Poppins", sans-serif;
-  color: var(--lightWhite);
+  color: var(--darkGray);
   font-size: 20px;
   
 }
@@ -172,13 +171,15 @@
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: var(--lightBlue);
+  color: var(--lightWhite);
   z-index: 3;
+  margin-top: 0;
  
 }
 .card:hover .workshop-description {
   opacity: 1; /* Torna visível ao passar o mouse */
-  color: var(--lightWhite);
+  color: var(--darkGray);
+
 }
 /* Estilo para a imagem do card */
 .card img {

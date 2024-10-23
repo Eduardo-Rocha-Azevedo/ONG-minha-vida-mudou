@@ -36,10 +36,9 @@ a {
 
 }
 
-/* From Uiverse.io by joe-watson-sbf */ 
-
 .btn {
-    font-size: 15px;
+    font-size: 18px;
+    text-align: left;
     background: transparent;
     border: none;
     padding: 1em 1.5em;
@@ -49,6 +48,8 @@ a {
     transition: 0.5s ease;
     cursor: pointer;
     width: 220px;
+    padding-left: 2px;
+    border-radius: 8px;
   }
   
   .btn::before {
@@ -81,6 +82,7 @@ a {
     background-color: var(--green);
     transition: 0.4s ease;
     z-index: -1;
+    border-radius: 4px;
   }
   
   .btn:hover::after {
@@ -144,17 +146,12 @@ a {
 .apresentacao a {
     padding: 10px;
     font-size: 15px;
-    background-color: #fff;
-    border: 1px solid var(--green);
-    border-radius: 8px;
     color: var(--green);
     margin-top: 10px;
-    width: 150px;
+    width: 220px;
 }
 
 .apresentacao a:hover {
-    background-color: var(--green);
-    border: none;
     color: var(--lightWhite);
 }
 
@@ -425,7 +422,7 @@ a {
 /* Mantém a animação do card */
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+   
 }
 
 /* Exibe a descrição ao passar o mouse */
@@ -436,7 +433,7 @@ a {
 .card__title {
     margin: 0;
     font-size: 24px;
-    color: #333;
+    color: var(--lightBlue);
     font-weight: 700;
 }
 
@@ -511,25 +508,6 @@ a {
     font-family: "Poppins",sans-serif;
 }
 
-.form button {
-    width: 95px;
-    height: 40px;
-    color: var(--green);
-    border-radius: 8px;
-    border: 1px solid var(--green);
-    font-size: 15px;
-    padding: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    background-color: #fff;
-}
-
-.form button:hover {
-    background-color: var(--green);
-    color: var(--lightWhite);
-}
-
 .campoForm {
     width: 40px;
 }
@@ -572,7 +550,77 @@ textarea:focus {
     transition: all 0.5s;
 }
 
+.c-button {
+    color: #000;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px;
+    width: 120px;
+    margin-bottom: 0.9em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+  }
   
+  .c-button--gooey {
+    color: var(--green);
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: "Poppins",sans-serif;
+    background-color: #fff;
+    text-transform: uppercase;
+    border: 2px solid var(--green);
+    border-radius: 8px;
+    position: relative;
+    transition: all 700ms ease;
+  }
+  
+  .c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+  }
+  
+  .c-button--gooey .c-button__blobs div {
+    background-color: var(--green);
+    width: 34%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+  }
+  
+  .c-button--gooey:hover {
+    color: #fff;
+  }
+  
+  .c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.4) translateY(0) translateZ(0);
+  }
 /*Footer =================================================================*/
 
 footer {
