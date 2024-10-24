@@ -15,7 +15,7 @@
 }
 
 .project-page-title {
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: #333;
     margin-bottom: 30px;
 }
@@ -51,13 +51,14 @@
 }
 
 .project-page-card-title {
-    font-size: 1.5em;
+    font-size: 20px;
     color: #444;
     margin: 15px 0 10px 0;
+    font-family: "Poppins", sans-serif;
 }
 
 .project-page-card-description {
-    font-size: 1em;
+    font-size: 15px;
     color: #666;
 }
 /* Estilo para a seção de oficinas */
@@ -78,10 +79,24 @@
 }
 
 .workshops-text p {
-  padding-left: 80px;
-  padding-right: 80px;
-  text-align: left;
+  
+  text-align: center;
+  
 
+}
+.texto-direita {
+  max-width: 600px;
+  /* Limita o tamanho do conteúdo à direita */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.esquerda {
+  display: flex;
+  flex-direction: column;
+  /* Coloca o título e a imagem um abaixo do outro */
+  align-items: flex-start;
+  /* Alinha à esquerda */
 }
 
 .workshops-list {
@@ -95,6 +110,7 @@
   position: relative;
   width: 180px; /* Largura dos cards */
   background: var(--lightWhite); /* Cor de fundo dos cards */
+  border: 1px solid #1b90cf41; /* Borda dos cards */
   display: flex;
   flex-direction: column; /* Organiza o conteúdo verticalmente */
   align-items: center;
@@ -162,6 +178,7 @@
 .card h3{
   font-family: "Poppins", sans-serif;
   color: var(--darkGray);
+  font-weight: 500;
   font-size: 20px;
   
 }
@@ -186,6 +203,36 @@
   width: 100%; /* Ajusta a largura da imagem */
   height: auto; /* Mantém a proporção da imagem */
   border-radius: 8px; /* Bordas arredondadas na imagem */
+}
+
+
+/* RESPONSIVIDADE ========================================================================>*/
+@media (max-width: 560px) {
+  .apresentacao h2 {
+      font-size: 1rem;
+  }
+  .apresentacao p {
+    font-size: 14px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .workshops-text h2 {
+      font-size: 1rem;
+
+  }
+
+  .workshop h3 {
+      font-size: 1.2rem;
+  }
+
+  .workshop p {
+      font-size: 14px;
+      padding: none;
+      text-align: left;
+  }
+  .workshops-list{
+    width: 200px;
+  }
 }
 
 /* Responsividade para telas menores */
@@ -214,19 +261,5 @@
   }
 }
 
-/* Responsividade para telas muito pequenas (celulares menores) */
-@media (max-width: 480px) {
-  .workshops-text h2 {
-      font-size: 1.5rem;
-  }
-
-  .workshop h3 {
-      font-size: 1.2rem;
-  }
-
-  .workshop p {
-      font-size: 0.9rem;
-  }
-}
 
 

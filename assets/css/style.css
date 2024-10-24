@@ -112,8 +112,8 @@ a {
 }
 
 .apresentacao h2 {
-    font-size: 60px;
-    font-weight: 400;
+    font-size: 52px;
+    font-weight: 350;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
     margin-top: 10vh;
@@ -625,7 +625,7 @@ textarea:focus {
 
 footer {
     background-color: var(--darkGray);
-    color: #272727;
+    color: var(--lightWhite);
     text-align: center;
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
