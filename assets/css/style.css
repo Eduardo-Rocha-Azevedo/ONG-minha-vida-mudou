@@ -624,7 +624,7 @@ textarea:focus {
 /*Footer =================================================================*/
 
 footer {
-    background-color: var(--darkGray);
+    background-color: #363636;
     color: #272727;
     text-align: center;
     padding: 20px 0;
