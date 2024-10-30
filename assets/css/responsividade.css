@@ -12,6 +12,10 @@
         flex-direction: column;
         text-align: center;
     }
+    .apresentacao p{
+        text-align: left;
+        padding: 0 10px;
+    }
 
     .apresentacao .esquerda,
     .apresentacao .texto-direita {
@@ -93,6 +97,7 @@
     .timeline-content {
         width: 100%;
     }
+    
     .form-content input,
     textarea {
         width: 100%;
