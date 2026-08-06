@@ -1,0 +1,309 @@
+/* ============================================
+   CELULARES
+============================================ */
+
+@media (max-width: 520px){
+
+/* Slider */
+
+.slider{
+    height:250px;
+}
+
+.slides img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+/* Apresentação */
+
+.apresentacao{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+}
+
+.apresentacao .esquerda,
+.apresentacao .texto-direita{
+    width:100%;
+    text-align:center;
+    align-items:center;
+}
+
+.apresentacao h2{
+    font-size:2.2rem;
+    margin:20px 0;
+}
+
+.apresentacao img{
+    width:90%;
+    max-width:350px;
+}
+
+.apresentacao p{
+    text-align:justify;
+    padding:0 15px;
+}
+
+/* Sobre */
+
+.sobre{
+    flex-direction:column;
+}
+
+.sobre .imagem-paralax,
+.sobre .conteudo-paralax{
+    width:100%;
+}
+
+.sobre article{
+    padding:25px;
+    height:auto;
+}
+
+.sobre article h2{
+    font-size:2rem;
+}
+
+.sobre article b{
+    font-size:2.3rem;
+}
+
+#sobre4{
+    height:auto;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+    justify-items:center;
+}
+
+.card{
+    width:90%;
+    max-width:380px;
+}
+
+/* Timeline */
+
+.timeline{
+    flex-direction:column;
+}
+
+.timeline::before{
+    display:none;
+}
+
+.timeline-item{
+    max-width:100%;
+    margin:15px 0;
+}
+
+.timeline-date{
+    margin-bottom:10px;
+}
+
+/* Apoie */
+
+.apoie-container{
+    flex-direction:column;
+    gap:35px;
+}
+
+.apoie-card{
+    width:100%;
+    padding:30px;
+}
+
+.apoie-card h2{
+    font-size:2rem;
+}
+
+.apoie-imagem img{
+    border-radius:15px;
+}
+
+/* Form */
+
+.contato{
+    width:95%;
+    padding:25px;
+}
+
+.form-content input,
+.form-content textarea{
+    width:100%;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+}
+
+footer img{
+    width:70px;
+}
+
+footer p{
+    padding:8px;
+}
+
+#waurlsite img{
+    width:50px;
+}
+
+}
+
+/* ============================================
+   TABLETS
+============================================ */
+
+@media (min-width:521px) and (max-width:1024px){
+
+.slider{
+    height:500px;
+}
+
+.slides img{
+    height:500px;
+    object-fit:cover;
+}
+
+/* Apresentação */
+
+.apresentacao{
+    flex-direction:column;
+    text-align:center;
+}
+
+.apresentacao .esquerda,
+.apresentacao .texto-direita{
+    width:100%;
+}
+
+.apresentacao h2{
+    font-size:2.6rem;
+}
+
+.apresentacao img{
+    width:70%;
+}
+
+.apresentacao p{
+    max-width:700px;
+    margin:auto;
+}
+
+/* Sobre */
+
+.sobre{
+    flex-direction:column;
+}
+
+.sobre article{
+    height:auto;
+    padding:30px;
+}
+
+/* Projetos */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    justify-items:center;
+}
+
+.card{
+    width:90%;
+}
+/* Apoie */
+.apoie-imagem img{
+   display: none;
+}
+.apoie-card{
+    width:100%;
+    padding:30px;
+}
+/* Timeline */
+
+.timeline{
+    flex-direction:column;
+}
+
+.timeline::before{
+    display:none;
+}
+
+.timeline-item{
+    max-width:100%;
+    margin:20px 0;
+}
+
+/* Apoie */
+
+.apoie-container{
+    flex-direction:column;
+}
+
+.apoie-card{
+    width:100%;
+}
+
+.apoie-card h2{
+    font-size:2.4rem;
+}
+
+/* Contato */
+
+.contato{
+    width:90%;
+}
+
+.form-content input,
+.form-content textarea{
+    width:100%;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+}
+
+footer img{
+    width:80px;
+}
+
+}
+
+/* ============================================
+   NOTEBOOKS PEQUENOS
+============================================ */
+
+@media (min-width:1025px) and (max-width:1366px){
+
+.apresentacao{
+
+    gap:40px;
+
+}
+
+.cards{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.apoie-container{
+
+    gap:50px;
+
+}
+
+}
