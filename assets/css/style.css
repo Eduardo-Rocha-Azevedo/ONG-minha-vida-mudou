@@ -459,6 +459,7 @@ a {
     color: #777;
     line-height: 1.4;
 }
+<<<<<<< HEAD
 /*==========================
         APOIE
 ===========================*/
@@ -910,6 +911,227 @@ footer p{
     margin:8px 0;
 
 }
+=======
+
+
+/* contato*/
+#contato {
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.contato {
+    background-color: var(--black);
+}
+
+#contato h1 {
+    font-family: 'Poppins';
+    font-size: 30px;
+    color: var(--lightWhite);
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--darkGray);
+}
+
+.formulario p {
+    font-weight: 40px;
+    align-items: center;
+    margin-left: auto;
+    font-family: "Poppins",sans-serif;
+}
+
+.form-content {
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.form-content label {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-content input {
+    display: inline-block;
+    width: 30em;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #0b45b1;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.form-content p {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+    font-family: "Poppins",sans-serif;
+}
+
+.campoForm {
+    width: 40px;
+}
+h4{
+    font-family: "Poppins",sans-serif;
+}
+
+.form-content.error input {
+    border-color: #ff3b25;
+}
+
+.form-content.error p {
+    color: #ff3b25;
+    visibility: visible;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10%;
+}
+
+textarea {
+    padding: 10px;
+    outline: none;
+    border: 1px solid #0b45b1;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    transition: all 0.5s;
+    width: 30em;
+}
+
+textarea:focus {
+    border-color: #202c55;
+    transition: all 0.5s;
+}
+
+.form-content input:focus {
+    border-color: #202c55;
+    transition: all 0.5s;
+}
+
+.c-button {
+    color: #000;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px;
+    width: 120px;
+    margin-bottom: 0.9em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .c-button--gooey {
+    color: var(--green);
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: "Poppins",sans-serif;
+    background-color: #fff;
+    text-transform: uppercase;
+    border: 2px solid var(--green);
+    border-radius: 8px;
+    position: relative;
+    transition: all 700ms ease;
+  }
+  
+  .c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+  }
+  
+  .c-button--gooey .c-button__blobs div {
+    background-color: var(--green);
+    width: 34%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+  }
+  
+  .c-button--gooey:hover {
+    color: #fff;
+  }
+  
+  .c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.4) translateY(0) translateZ(0);
+  }
+/*Footer =================================================================*/
+
+footer {
+    background-color: #363636;
+    color: #272727;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+
+}
+
+footer img {
+    width: 70px;
+    margin-top: 10px;
+}
+/* Animacoes*/
+
+[data-anima] {
+    opacity: 0;
+    transition: .8s;
+}
+
+[data-anima="esquerda"] {
+    transform: translate3d(-50px, 0, 0);
+    /*X Y Z*/
+}
+
+[data-anima="direita"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anima="centro"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anima].animacao {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+>>>>>>> e2e0fb4a3a6948999c01bdb8be2fd488642d50f0
 /*Botao whatsapp ==========================================================================================================*/
 
 
